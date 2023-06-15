@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        REGISTRY_NAME = "khazi123/ecausermgmt"
+        REGISTRY_NAME = "khazi123/ecavisitor"
      }
 
     agent any
@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 cleanWs()
-                    git branch: 'main', url: 'https://github.com/MohammedIrfan777/user-management.git'
+                    git branch: 'main', url: 'https://github.com/MohammedIrfan777/eca-visitor.git'
             }
         }
         stage('Build') {
