@@ -10,7 +10,7 @@ spring:
       enabled: false
 
 server:
-  port: 6094
+  port: 6091
 
 management:
   endpoint:

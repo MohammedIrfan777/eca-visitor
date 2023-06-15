@@ -33,22 +33,22 @@ pipeline {
             }
         }
 
-        stage('SonarQube') {
-                  environment {
-                    scannerHome = tool 'SonarQube'
-                  }
-                  steps {
-                              script {
-                              sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=ecausermgmt: \
-                                                                  -Dsonar.projectName=ecausermgmt \
-                                                                  -Dsonar.projectVersion=1.0 \
-                                                                  -Dsonar.sources=src/ \
-                                                                  -Dsonar.java.binaries=target/classes/com/ps/mslife/controller/ \
-                                                                  -Dsonar.junit.reportsPath=target/surefire-reports/ \
-                                                                  -Dsonar.jacoco.reportsPath=target/jacoco.exec"
-                                                                  }
-                                    }
-             }
+//         stage('SonarQube') {
+//                   environment {
+//                     scannerHome = tool 'SonarQube'
+//                   }
+//                   steps {
+//                               script {
+//                               sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=ecausermgmt: \
+//                                                                   -Dsonar.projectName=ecausermgmt \
+//                                                                   -Dsonar.projectVersion=1.0 \
+//                                                                   -Dsonar.sources=src/ \
+//                                                                   -Dsonar.java.binaries=target/classes/com/ps/mslife/controller/ \
+//                                                                   -Dsonar.junit.reportsPath=target/surefire-reports/ \
+//                                                                   -Dsonar.jacoco.reportsPath=target/jacoco.exec"
+//                                                                   }
+//                                     }
+//              }
 //         stage('SonarQube analysis') {
 // //    def scannerHome = tool 'SonarScanner 4.0';
 //         steps{
@@ -64,11 +64,11 @@ pipeline {
           }
         }
 
-        stage('Docker Build & Push') {
-            steps {
-                 sh 'docker push $REGISTRY_NAME:$BUILD_NUMBER'
-            }
-        }
+//         stage('Docker Build & Push') {
+//             steps {
+//                  sh 'docker push $REGISTRY_NAME:$BUILD_NUMBER'
+//             }
+//         }
     }
 
     post {

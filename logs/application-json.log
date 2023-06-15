@@ -1,0 +1,1 @@
+{"@timestamp":"2023-06-10T00:00:53.370+05:30","@version":"1","message":"Resolving eureka endpoints via configuration","logger_name":"com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver","thread_name":"AsyncResolver-bootstrap-executor-0","level":"INFO","level_value":20000}
